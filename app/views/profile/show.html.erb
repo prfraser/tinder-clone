@@ -1,0 +1,8 @@
+<h1>Profile</h1>
+<%= image_tag @user.avatar.url(:medium) %><br>
+Email: <%= @user.email %><br>
+Description: <%= @user.description %><br>
+Gender: <%= @user.gender %><br></%>
+<%= render 'follows/form' %>
+
+<%= link_to 'Back', root_path %><br>

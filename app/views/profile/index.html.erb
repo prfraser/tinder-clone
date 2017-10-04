@@ -1,0 +1,24 @@
+<h1>Profile</h1>
+<%= image_tag @user.avatar.url(:medium) %><br>
+Email: <%= @user.email %><br>
+Description: <%= @user.description %><br>
+Gender: <%= @user.gender %>
+
+<% if @user == current_user %>
+	<h2>Following: </h2>
+	<% @following.each do |follow| %>
+	<ul>
+		<li>
+			<%= follow.email %>
+		</li>
+	</ul>
+	<% end %>
+	<h2>Followers: </h2>
+	<% @followers.each do |follow| %>
+	<ul>
+		<li>
+			<%= follow.email %>
+		</li>
+	</ul>
+	<% end %>
+<% end %>

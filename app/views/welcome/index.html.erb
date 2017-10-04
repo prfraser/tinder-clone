@@ -1,0 +1,9 @@
+<h1>Welcome</h1>
+
+<% @users.each do |user| %>
+	<%= image_tag user.avatar.url(:medium) %><br>
+	Email: <%= user.email %><br>
+	Description: <%= user.description %><br>
+	Gender: <%= user.gender %><br>
+	<%= link_to 'Show User', profile_path(user.id) %><br>
+<% end %>
