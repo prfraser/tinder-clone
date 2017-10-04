@@ -13,12 +13,14 @@ Gender: <%= @user.gender %>
 		</li>
 	</ul>
 	<% end %>
-	<h2>Followers: </h2>
-	<% @followers.each do |follow| %>
+	<h2>Matches: </h2>
+	<% @matches.each do |match| %>
 	<ul>
 		<li>
-			<%= follow.email %>
+			<%= match.email %>
 		</li>
 	</ul>
 	<% end %>
 <% end %>
+
+<%= link_to 'Back', root_path %><br>
